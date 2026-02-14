@@ -1,4 +1,4 @@
-//Embedded C program to blink all leds for 1 sec and off for 1 sec on PORTB
+//Embedded C program to blink all leds ON for 1 sec and OFF for 1 sec on PORTB
 
 #include <xc.h>
 
@@ -17,9 +17,9 @@ void main()
    while(1)
    {
        PORTB = 0xFF;     //TURN ON all LEds on PORTB
-       __delay_ms(500);
+       __delay_ms(100);
       PORTB = 0x00;     // TURN OFF all LEDs on PORTB
-      __delay_ms(500);
+      __delay_ms(100);
    }
    return;
 }
