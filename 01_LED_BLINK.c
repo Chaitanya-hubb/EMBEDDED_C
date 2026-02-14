@@ -5,7 +5,7 @@
 #pragma config WDTE = 0FF      // Watchdog Timer disabled
 #define __XTAL_FREQ  4000000   // 4 MHz crystal frequency
 
-static void init_congit(void)
+static void init_config(void)
 {
    TRISB = 0x00;  //set all pins as output 
 }
