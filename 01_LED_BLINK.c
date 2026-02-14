@@ -1,3 +1,5 @@
+//Embedded C program to blink all leds for 1 sec and off for 1 sec on PORTB
+
 #include <xc.h>
 
 #pragma config WDTE = 0FF      // Watchdog Timer disabled
