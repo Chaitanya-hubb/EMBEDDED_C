@@ -16,7 +16,7 @@ void main()
    
    while(1)
    {
-       PORTB = 0xFF;     //TURN ON all LEds on PORTB
+       PORTB = 0xFF;     //TURN ON all LEDs on PORTB
        __delay_ms(1000); //delay for one sec
       PORTB = 0x00;      // TURN OFF all LEDs on PORTB
       __delay_ms(1000);  //delay for one sec
