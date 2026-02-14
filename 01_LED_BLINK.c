@@ -2,8 +2,8 @@
 
 #include <xc.h>
 
-#pragma config WDTE = OFF      // Watchdog Timer disabled
-#define _XTAL_FREQ  4000000   // 4 MHz crystal frequency
+#pragma config WDTE = OFF      //Watchdog Timer disabled
+#define _XTAL_FREQ  4000000    //4 MHz crystal frequency
 
 static void init_config(void)
 {
@@ -17,9 +17,9 @@ void main()
    while(1)
    {
        PORTB = 0xFF;     //TURN ON all LEds on PORTB
-       __delay_ms(100);
-      PORTB = 0x00;     // TURN OFF all LEDs on PORTB
-      __delay_ms(100);
+       __delay_ms(1000); //delay for one sec
+      PORTB = 0x00;      // TURN OFF all LEDs on PORTB
+      __delay_ms(1000);  //delay for one sec
    }
    return;
 }
