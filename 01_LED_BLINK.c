@@ -1,7 +1,7 @@
 #include <xc.h>
 
 #pragma config WDTE = 0FF      // Watchdog Timer disabled
-#define __XTAL_FREQ  4000000   // 4 MHz crstal frequency
+#define __XTAL_FREQ  4000000   // 4 MHz crystal frequency
 
 static void init_congit(void)
 {
