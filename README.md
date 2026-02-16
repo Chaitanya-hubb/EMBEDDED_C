@@ -1,4 +1,4 @@
- Embedded C Projects
+# Embedded C Projects
 
 ## Description
 This repository contains simple Embedded C programs for PIC microcontrollers.
