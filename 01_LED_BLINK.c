@@ -8,9 +8,10 @@
 static void init_config(void)
 {
    TRISB = 0x00;  //set all pins as output 
+   PORTB = 0x00; //Initialize PORTB to LOW
 }
 
-void main()
+int main(void)
 {
    init_config();
    
@@ -21,5 +22,4 @@ void main()
       PORTB = 0x00;      //TURN OFF all LEDs on PORTB
       __delay_ms(1000);  //Delay for 1 second
    }
-   return;
 }
