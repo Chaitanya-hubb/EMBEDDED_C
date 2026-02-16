@@ -14,3 +14,7 @@ This repository contains simple Embedded C programs for PIC microcontrollers.
 - GPIO configuration using TRIS register
 - Software delay using __delay_ms()
 - Watchdog Timer disabled
+- 
+## Notes
+- The program was written and built using **MPLAB X IDE**.  
+- The program logic was tested using **PicSimLab** simulator.
