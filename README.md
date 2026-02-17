@@ -9,13 +9,14 @@ This repository contains simple Embedded C programs for PIC microcontrollers.
 3. 03_led_blink_pattern.c - Turn ON LEDs one by one on PORTB, then turn OFF LEDs one by one from top to bottom
 
 **Microcontroller**
-- PIC series (XC8 compiler)
+- PIC Microcontroller
+- XC8 Compiler
 
 **Features**
 - GPIO configuration using TRIS register
 - Software delay using __delay_ms()
 - Watchdog Timer disabled
 - 
- **Notes**
-- The program was written and built using **MPLAB X IDE**.  
-- The program logic was tested using **PicSimLab** simulator.
+ **Tools Used**
+- MPLAB X IDE  
+- PicSimLab simulator.
