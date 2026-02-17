@@ -1,25 +1,45 @@
-//Embedded C program to blink all LEDs Turn ON for 1 sec and Turn OFF for 1 sec on PORTB
+// Embedded C program to implement LED fill and clear train pattern (top-to-bottom) on PORTB
 
 #include <xc.h>
 
-#pragma config WDTE = OFF      //Watchdog Timer disabled
-#define _XTAL_FREQ  4000000    //4 MHz crystal frequency
+#pragma config WDTE = OFF   // Watchdog Timer disabled
+
+#define _XTAL_FREQ 8000000
+
 
 static void init_config(void)
 {
-   TRISB = 0x00;  //set all pins as output 
-   PORTB = 0x00; //Initialize PORTB to LOW
+    TRISB = 0x00;   // Set PORTB as output
+    PORTB = 0x00;   // Turn OFF all LEDs
 }
 
-int main(void)
-{
-   init_config();
-   
-   while(1)
-   {
-       PORTB = 0xFF;     //TURN ON all LEDs on PORTB
-       __delay_ms(1000); //Delay for 1 second
-      PORTB = 0x00;      //TURN OFF all LEDs on PORTB
-      __delay_ms(1000);  //Delay for 1 second
-   }
+void main(void) {
+
+    init_config();
+
+    while(1)
+    {
+        //TURN ON one by one
+        PORTB = 0x00;   // Start with all OFF
+
+        for(int i = 0; i < 8; i++)
+        {
+            PORTB |= (1 << i);   // Turn ON one LED
+            __delay_ms(200);
+        }
+
+        // Small delay after full ON
+        __delay_ms(300);
+
+        //TURN OFF one by one
+        for(int i = 0; i < 8; i++)
+        {
+            PORTB &= ~(1 << i);   // Turn OFF one LED
+            __delay_ms(200);
+        }
+
+        __delay_ms(300);
+    }
+
+    return;
 }
