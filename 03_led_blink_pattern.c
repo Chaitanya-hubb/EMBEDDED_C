@@ -1,0 +1,25 @@
+//Embedded C program to blink all LEDs Turn ON for 1 sec and Turn OFF for 1 sec on PORTB
+
+#include <xc.h>
+
+#pragma config WDTE = OFF      //Watchdog Timer disabled
+#define _XTAL_FREQ  4000000    //4 MHz crystal frequency
+
+static void init_config(void)
+{
+   TRISB = 0x00;  //set all pins as output 
+   PORTB = 0x00; //Initialize PORTB to LOW
+}
+
+int main(void)
+{
+   init_config();
+   
+   while(1)
+   {
+       PORTB = 0xFF;     //TURN ON all LEDs on PORTB
+       __delay_ms(1000); //Delay for 1 second
+      PORTB = 0x00;      //TURN OFF all LEDs on PORTB
+      __delay_ms(1000);  //Delay for 1 second
+   }
+}
