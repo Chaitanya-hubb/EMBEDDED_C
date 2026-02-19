@@ -1,4 +1,4 @@
-// Embedded C program to implement LED fill and clear train pattern (top-to-bottom) on PORTB
+// Embedded C program to implement LED fill and clear train pattern on PORTB
 
 #include <xc.h>
 
@@ -19,9 +19,9 @@ void main(void) {
 
     while(1)
     {
-        //TURN ON one by one
         PORTB = 0x00;   // Start with all OFF
 
+        //TURN ON one by one
         for(int i = 0; i < 8; i++)
         {
             PORTB |= (1 << i);   // Turn ON one LED
@@ -40,6 +40,4 @@ void main(void) {
 
         __delay_ms(300);
     }
-
-    return;
 }
