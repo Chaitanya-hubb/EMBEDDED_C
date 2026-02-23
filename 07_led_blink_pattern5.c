@@ -1,4 +1,4 @@
-// Embedded C program to implement LED fill and clear pattern on PORTB
+//Embedded C program to implement LED fill and clear pattern on PORTB
 
 #include <xc.h>
 
@@ -26,7 +26,7 @@ void main()
         {
             wait = 0;
             
-            if(i >= 0 && i < 8)                 //LEFT ON
+            if(i >= 0 && i < 8)               //LEFT ON
             {
                 PORTB = (PORTB << 1) | 1; 
             }
