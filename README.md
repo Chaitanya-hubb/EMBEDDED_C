@@ -20,13 +20,6 @@ This repository contains Embedded C programs for the PIC16F877A microcontroller,
 - **IDE:** MPLAB X IDE  
 - **Simulator:** PicSimLab  
 
-## Features / Concepts Covered
-- GPIO configuration using **TRIS register**  
-- Reading/writing data using **PORT register**  
-- LED interfacing and pattern generation  
-- Software delay using '__delay_ms()'  
-- Watchdog Timer disabled  
-
 ## Future Work
 - Timer-based LED patterns  
 - Interrupt-driven GPIO  
