@@ -4,6 +4,7 @@
 This repository contains simple Embedded C programs for PIC microcontrollers.
 
 **Projects**
+
 **GPIO**
 1. 01_led_blink_portb.c - Blink all LEDs on PORTB
 2. 02_led_alternating_pattern.c - Alternate blinking of first 4 and last 4 LEDs on PORTB
