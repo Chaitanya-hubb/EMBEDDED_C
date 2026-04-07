@@ -10,6 +10,7 @@ This repository contains simple Embedded C programs for PIC microcontrollers.
 4. 04_led_blink_pattern2.c – LED Fill and Clear Train Pattern 2
 5. 05_led_blink_pattern3.c – LED Fill and Clear Train Pattern 3
 6. 06_led_blink_pattern4.c – LED Fill and Clear Train Pattern 4
+7. 07_led_blink_pattern5.c – LED Fill and Clear Train Pattern 5
 
 **Microcontroller**
 - PIC Microcontroller
