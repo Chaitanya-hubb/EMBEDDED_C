@@ -16,7 +16,7 @@ void __interrupt() ISR()
             count = 0;
         }
 
-        TMR0 = 0;          // Reload timer
+        TMR0 = 0;          // Reload timers
         T0IF = 0;          // Clear interrupt flag
     }
 }
