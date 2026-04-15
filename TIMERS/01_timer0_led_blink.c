@@ -2,29 +2,41 @@
 
 #include <xc.h>
 
-void delay()
+#pragma config WDTE = OFF
+
+#define LED PORTB
+#define LED_DDR TRISB
+
+void init_config(void)
 {
-    int i;
+    LED_DDR = 0x00;
+    LED = 0x00;
 
-    for(i = 0; i < 1000; i++)   // Increase delay
-    {
-        TMR0 = 0;
-
-        while(TMR0 < 255);
-    }
+    OPTION_REG = 0x07; // Prescaler 1:256
+    TMR0 = 0;
+    T0IF = 0;
 }
 
-void main()
+void main(void)
 {
-    TRISB = 0x00;        // PORTB output
-    OPTION_REG = 0x87;   // Prescaler 1:256 (slower timer)
+    unsigned int count = 0;
 
-    while(1)
+    init_config();
+
+    while (1)
     {
-        PORTB = 0xFF;    // LED ON
-        delay();
+        if (T0IF)   //polling
+        {
+            T0IF = 0;
+            TMR0 = 0;
 
-        PORTB = 0x00;    // LED OFF
-        delay();
+            count++;
+
+            if (count == 50)
+            {
+                LED = ~LED;
+                count = 0;
+            }
+        }
     }
 }
