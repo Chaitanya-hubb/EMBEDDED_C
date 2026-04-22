@@ -28,6 +28,6 @@ This repository contains Embedded C programs for the PIC16F877A microcontroller,
 - **Simulator:** PicSimLab  
 
 ## Future Work
-- Interrupt-driven GPIO  
+- PWM-based applications (LED dimming, motor control) 
 - ADC and sensor interfacing  
 - UART communication
