@@ -12,7 +12,14 @@ This repository contains Embedded C programs for the PIC16F877A microcontroller,
 4. **04_led_blink_pattern2.c** – LED Fill and Clear Train Pattern 2  
 5. **05_led_blink_pattern3.c** – LED Fill and Clear Train Pattern 3  
 6. **06_led_blink_pattern4.c** – LED Fill and Clear Train Pattern 4  
-7. **07_led_blink_pattern5.c** – LED Fill and Clear Train Pattern 5  
+7. **07_led_blink_pattern5.c** – LED Fill and Clear Train Pattern 5
+
+### Timers
+1. Timer0 polling method (LED blink)
+2. Timer0 interrupt method (LED blink)
+3. Timer0 preload-based delay generation
+4. Timer-based LED running pattern
+5. Timer separator using Timer0, Timer1, Timer2 (0.5s synchronized blinking)
 
 ## Microcontroller & Tools
 - **Microcontroller:** PIC16F877A  
@@ -21,7 +28,6 @@ This repository contains Embedded C programs for the PIC16F877A microcontroller,
 - **Simulator:** PicSimLab  
 
 ## Future Work
-- Timer-based LED patterns  
 - Interrupt-driven GPIO  
 - ADC and sensor interfacing  
 - UART communication
