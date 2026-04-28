@@ -55,8 +55,8 @@ void init_timer0(void)
     /* Setting internal clock source */
     T0CS = 0;
 
-    /* Assigning prescaler to Watchdog Timer */
-    PSA = 1;
+    /* Assign prescaler to Timer0 */
+    PSA = 0;
 
     /* Load timer value */
     TMR0 = 6;
@@ -118,7 +118,8 @@ void __interrupt() isr(void)
         }
 
         /* Increment loop counter */
-        if (loop_counter++ == PERIOD)
+        loop_counter++;
+        if (loop_counter >= PERIOD)
         {
             loop_counter = 0;
         }
