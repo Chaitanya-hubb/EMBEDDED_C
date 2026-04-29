@@ -20,6 +20,8 @@ This repository contains Embedded C programs for the PIC16F877A microcontroller,
 3. Timer0 preload-based delay generation
 4. Timer-based LED running pattern
 5. Timer separator using Timer0, Timer1, Timer2 (0.5s synchronized blinking)
+6. Implement Timer0 ISR based PWM LED dimmer with adjustable duty cycle
+7. Implement Timer0 ISR based point brightness control using PWM
 
 ## Microcontroller & Tools
 - **Microcontroller:** PIC16F877A  
